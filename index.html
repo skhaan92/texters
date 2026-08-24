@@ -24,6 +24,12 @@
             padding-bottom: 6px;
             border-bottom: 1px solid #e0e0e0;
         }
+        h3 {
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #1565C0;
+        }
         p { margin-bottom: 14px; }
         ul { margin: 10px 0 14px 20px; }
         li { margin-bottom: 6px; }
@@ -35,6 +41,14 @@
             border-radius: 4px;
             margin: 24px 0;
         }
+        .changed {
+            background: #fff8e1;
+            border-left: 4px solid #f9a825;
+            padding: 10px 16px;
+            border-radius: 4px;
+            margin: 14px 0;
+            font-size: 14px;
+        }
         footer { margin-top: 60px; font-size: 13px; color: #888; }
     </style>
 </head>
@@ -42,12 +56,16 @@
 <div class="container">
 
     <h1>Privacy Policy</h1>
-    <p class="subtitle">Texters &nbsp;·&nbsp; Last updated: June 12, 2025</p>
+    <p class="subtitle">Texters &nbsp;·&nbsp; Last updated: August 12, 2026</p>
 
     <div class="highlight">
         <strong>Short version:</strong> Texters is a local-only SMS/MMS app.
-        Your messages never leave your device and are never uploaded to any server
-        we operate. We do not sell, share, or monetise your data.
+        Your messages, contacts, and phone numbers never leave your device and
+        are never uploaded to any server we operate. We use Google AdMob for
+        ads, Google Firebase for crash/usage analytics, Google Play Billing for
+        the optional Pro upgrade, and Meta App Events for advertising
+        measurement — each described in Section 4 below, none of which ever
+        receive your message content, contacts, or phone numbers.
     </div>
 
     <h2>1. Who We Are</h2>
@@ -133,13 +151,11 @@
 
     <h2>4. Third-Party Services</h2>
     <p>
-        Texters uses the following third-party services provided by Google.
-        Each service operates under
-        <a href="https://policies.google.com/privacy" target="_blank">
-        Google's Privacy Policy</a>.
+        Texters uses the following third-party services. Each operates under
+        its own provider's privacy policy, linked below.
     </p>
 
-    <p><strong>Firebase Crashlytics</strong></p>
+    <h3>Firebase Crashlytics (Google)</h3>
     <p>
         We use Firebase Crashlytics to receive anonymous crash reports when
         the app encounters an unexpected error. Crashlytics collects:
@@ -155,7 +171,7 @@
         no personally identifiable information.
     </p>
 
-    <p><strong>Firebase Analytics</strong></p>
+    <h3>Firebase Analytics (Google)</h3>
     <p>
         We use Firebase Analytics to understand how features are used in
         aggregate — for example, how often users schedule messages or change
@@ -170,7 +186,55 @@
         Analytics does <strong>not</strong> collect message content, contact
         information, or phone numbers. All data is aggregated and anonymous.
         You can opt out of analytics data collection through your device's
-        Google account settings under <em>Data & privacy → Ad settings</em>.
+        Google account settings under <em>Data &amp; privacy → Ad settings</em>.
+    </p>
+
+    <h3>Google AdMob</h3>
+    <p>
+        Texters shows in-app advertising through Google AdMob to support the
+        free version of the app (advertising is removed if you purchase
+        Texters Pro). AdMob may use your device's advertising ID to show ads
+        and, where permitted, personalize them based on your interests.
+        AdMob does <strong>not</strong> receive your messages, contacts, or
+        phone numbers. You can reset or limit your advertising ID at any time
+        via your device's Settings → Privacy → Ads.
+    </p>
+
+    <h3>Google Play Billing</h3>
+    <p>
+        The optional Texters Pro upgrade (ad removal and additional features)
+        is processed entirely through Google Play's billing system. We never
+        see or store your payment card details — Google Play handles the
+        transaction and only informs our app whether the purchase succeeded.
+    </p>
+
+    <h3>Meta App Events (Facebook)</h3>
+    <div class="changed">
+        <strong>New in this update:</strong> Texters now integrates Meta's
+        App Events SDK to measure the performance of our advertising
+        campaigns on Facebook and Instagram.
+    </div>
+    <p>
+        Meta App Events shares the following with Meta:
+    </p>
+    <ul>
+        <li>Your device's advertising identifier</li>
+        <li>That the app was installed and opened</li>
+        <li>That you set Texters as your default SMS app</li>
+        <li>General usage activity — for example, that a message was sent or
+            received, or that a setting was changed — without any detail
+            about what was sent, received, or changed</li>
+    </ul>
+    <p>
+        Meta App Events does <strong>not</strong> receive the content of your
+        messages, your contacts, or your phone numbers under any
+        circumstance. This data is used solely to measure and improve the
+        effectiveness of our ad campaigns, not to build a profile of your
+        conversations. See
+        <a href="https://www.facebook.com/privacy/policy/" target="_blank">
+        Meta's Privacy Policy</a> for how Meta itself handles this data, and
+        your device's Settings → Privacy → Ads to reset or limit your
+        advertising identifier.
     </p>
 
     <h2>5. Data We Do Not Collect</h2>
@@ -185,15 +249,18 @@
     </ul>
     <p>
         We do not create user accounts, and there are no Texters servers that
-        store your personal data.
+        store your personal data. Your device's advertising identifier is
+        used only by the third-party services listed in Section 4, never by
+        us directly.
     </p>
 
     <h2>6. Data Sharing</h2>
     <p>
-        We do not sell, trade, rent, or share your personal data with any
-        third party for marketing or commercial purposes. The only data that
-        leaves your device is the anonymous diagnostic data described in
-        Section 4 above, sent directly to Google's Firebase infrastructure.
+        We do not sell, trade, or rent your personal data. The only data
+        that leaves your device is the limited, non-content diagnostic and
+        advertising-measurement data described in Section 4 above, sent
+        directly to Google (Firebase, AdMob, Play Billing) and Meta (App
+        Events) — never routed through or stored on any server we operate.
     </p>
 
     <h2>7. Data Retention</h2>
@@ -206,8 +273,10 @@
         default SMS app you install next.
     </p>
     <p>
-        Firebase Crashlytics retains crash data for 90 days.
-        Firebase Analytics retains event data for 14 months by default.
+        Firebase Crashlytics retains crash data for 90 days. Firebase
+        Analytics retains event data for 14 months by default. Meta and
+        AdMob retain advertising-measurement data according to their own
+        respective policies, linked in Section 4.
     </p>
 
     <h2>8. Children's Privacy</h2>
@@ -223,8 +292,8 @@
         Since Texters stores data only on your device, the security of your
         messages depends on your device's own security (screen lock,
         encryption). We recommend keeping your device's OS up to date and
-        using a screen lock. Communication with Firebase services is
-        encrypted in transit using TLS.
+        using a screen lock. Communication with Firebase, AdMob, Play
+        Billing, and Meta App Events is encrypted in transit using TLS.
     </p>
 
     <h2>10. Changes to This Policy</h2>
@@ -242,11 +311,11 @@
     </p>
     <p>
         <strong>Email:</strong>
-        <a href="mailto:support@texters.app">support@texters.app</a>
+        <a href="mailto:s.khaan92@gmail.com">s.khaan92@gmail.com</a>
     </p>
 
     <footer>
-        &copy; 2025 Texters. All rights reserved.
+        &copy; 2026 Texters. All rights reserved.
     </footer>
 
 </div>
